@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Project</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button id="langBtn">🇬🇧</button>
+    <div class="container">
+        <h1 id="mainTitle">My first project</h1>
+        <h2 id="authorTitle">By: Fabrizio</h2>
+        <p class="parrafo" id="introText">This is a paragraph used as an example to make use of programming html, CSS and JS. Thanks for reading.</p>
+    </div>
+
+    <hr>
+
+    <div class="yuta-box">
+    <img  src="img/yutaokkred.png"  alt="foto-presentacion"  class="yuta"  data-static="img/yutaokkred.png"  data-gif="img/yutaokkotsu.gif" draggable="false">
+    <p class="rika">リカちゃん、力を貸して</p>
+    </div>
+
+    <hr>
+
+    <div class="mystuff">
+        <div class="about-me">
+            <h3 class="h3aboutme" id="aboutTitle">About me</h3>
+            <p class="me" id="aboutText">I'm a simple person living a good life, that enjoys programming while listening to relaxing music. Decided to start being a programmer after several years of trying to find my own profession, and this one is the one im actually looking forward to.</p>
+        </div>
+
+        <div class="my-projects">
+            <h3 class="h3projects" id="projectsTitle">My projects</h3>
+            <p class="projects" id="projectsText">One of my own projects is to create virtual life through this method, what does this means? AI, yes, it's one of my motivations. However, I really dislike the use of AI as a method to fix everything and replacing human labour, instead, I encourage the use of it as a real tool to solve real issues, like a mathematical ecuation.</p>
+        </div>
+
+        <footer class="contacts">
+            <h3 class="h3contacts" id="contactsTitle">My contacts</h3>
+
+            <a href="https://www.instagram.com/adriel_garino/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+                <span>@adriel_garino</span>
+            </a>
+            <div class="email-contact">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span class="email-text">garinoadriel645@gmail.com</span>
+            </div>
+            <a href="https://github.com/Frenzxy" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <span>Frenzxy</span>
+            </a>
+        </footer>
+    </div>
+
+    <button id="themeBtn">🌙</button>
+    <button id="musicBtn">🔇</button>
+    <button id="nextBtn">⏭</button>
+
+    <p id="songTitle"></p>
+    <audio id="bgMusic"></audio>
+
+    <audio id="gifSound" src="audio/Delirious.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

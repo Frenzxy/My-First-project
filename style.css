@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(0, 0%, 2%);
+    color: hsl(0, 0%, 77%);
+    width: min(90vw, 1400px);
+    margin: 0 auto;
+    transition: background 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+.container,
+hr,
+.mystuff {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+h1,
+h2,
+.rika {
+    color: hsl(0, 0%, 77%);
+    border: solid 2px hsl(0, 100%, 12%);
+    width: fit-content;
+    border-radius: 10px;
+    font-family: "Orbitron", sans-serif;
+    font-style: normal;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.parrafo {
+    color: hsl(0, 0%, 77%);
+    border: solid 2px hsl(0, 100%, 12%);
+    width: 100%;
+    border-radius: 10px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 550;
+    font-size: 25px;
+    margin: 15px auto;
+    padding: 15px;
+    text-align: center;
+    transition: text-shadow 0.7s ease-in-out;
+}
+
+.parrafo:hover {
+    text-shadow: 0 0 8px hsl(0, 0%, 77%);
+}
+
+.yuta {
+    width: 50vw;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.yuta-box{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.yuta-box:hover .yuta {
+    border: 2px solid hsl(0, 100%, 12%);
+    box-shadow: 0 0 15px hsl(0, 100%, 12%);
+}
+
+.rika {
+    font-size: 20px;
+    text-shadow: 0 0 8px hsl(0, 0%, 77%);
+}
+
+hr {
+    border-color: hsl(0, 0%, 15%);
+    border-radius: 50px;
+    margin: 20px auto;
+}
+
+.mystuff {
+    margin: 20px auto;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: hsl(0, 0%, 71%);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-me,
+.my-projects {
+    position: relative;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 48%;
+    background: hsl(0, 0%, 2%);
+    z-index: 0;
+    overflow: hidden;
+    color: hsl(0, 0%, 77%);
+    box-shadow: 0 0 2px transparent;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.about-me::before,
+.my-projects::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent 0%,
+        transparent 70%,
+        hsl(0, 100%, 15%) 77.7%,
+        hsl(0, 5%, 78%) 83.3%,
+        hsl(0, 100%, 15%) 88.8%,
+        transparent 100%
+    );
+    animation: rotateBorder 4s linear infinite;
+}
+
+.about-me::after,
+.my-projects::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: hsl(0, 0%, 2%);
+    border-radius: 9px;
+    z-index: -1;
+}
+
+.about-me:hover,
+.my-projects:hover,
+.contacts:hover {
+    box-shadow: 0 0 15px hsl(0, 100%, 12%);
+}
+
+.contacts {
+    border: solid 2px hsl(0, 100%, 12%);
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 2px transparent;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.contacts span {
+    font-size: 20px;
+}
+.email-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.email-text{
+    text-decoration: underline;
+}
+
+i {
+    font-size: 30px;
+    margin: 5px;
+    padding: 5px;
+    color: hsl(0, 5%, 78%);
+    transition: transform 0.3s ease;
+}
+
+i:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px white;
+}
+
+.h3aboutme,
+.h3projects,
+.h3contacts {
+    font-family: "Orbitron", sans-serif;
+    text-decoration: underline;
+}
+
+#themeBtn,
+#musicBtn,
+#nextBtn {
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    z-index: 10;
+    border: 2px solid hsl(0, 100%, 12%);
+    background-color: black;
+}
+#nextBtn{
+    color: aliceblue;
+    display: none;
+    /* nextBtn is a styling purposes only button, it will be remain hidden unless the use of it is needed. */
+}
+#langBtn {
+    position: fixed;
+    left: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    cursor: pointer;
+    z-index: 10;
+    border: 2px solid hsl(0, 100%, 12%);
+    background-color: black;
+    color: aliceblue;
+    font-size: 15px;
+}
+#themeBtn {
+    top: 10px;
+}
+
+#musicBtn {
+    top: 10px;
+    right: 75px;
+}
+
+#nextBtn {
+    top: 120px;
+}
+
+#songTitle {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    padding: 10px 15px;
+    border: 2px solid hsl(0, 100%, 12%);
+    border-radius: 10px;
+    background: hsl(0, 0%, 2%);
+    color: hsl(0, 0%, 77%);
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+    box-shadow: 0 0 10px hsl(0, 100%, 12%);
+}
+
+body.light-mode {
+    background: hsl(0, 0%, 95%);
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode .rika,
+body.light-mode .parrafo,
+body.light-mode .about-me,
+body.light-mode .my-projects,
+body.light-mode .contacts,
+body.light-mode .contacts span,
+body.light-mode .h3contacts,
+body.light-mode a,
+body.light-mode i,
+body.light-mode #songTitle,
+body.light-mode #musicBtn,
+body.light-mode #themeBtn,
+body.light-mode #langBtn {
+    color: hsl(0, 0%, 10%);
+}
+
+body.light-mode .about-me,
+body.light-mode .my-projects,
+body.light-mode .about-me::after,
+body.light-mode .my-projects::after,
+body.light-mode .contacts,
+body.light-mode #songTitle,
+body.light-mode #musicBtn,
+body.light-mode #themeBtn,
+body.light-mode #langBtn {
+    background: hsl(0, 0%, 95%);
+}
+.yuta-box,
+.yuta {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    touch-action: manipulation;
+}
+
+.yuta {
+    pointer-events: none;
+}
+.yuta.active {
+    border: 2px solid hsl(0, 100%, 12%);
+    box-shadow: 0 0 15px hsl(0, 100%, 12%);
+}
+
+@keyframes rotateBorder {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    h1,
+    h2,
+    .rika {
+        font-size: 16px;
+    }
+
+    .parrafo {
+        font-size: 16px;
+    }
+
+    .about-me,
+    .my-projects {
+        margin: auto;
+        width: 100%;
+        max-width: 90vw;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .h3aboutme,
+    .h3projects {
+        text-align: center;
+        padding: 0 0 10px 0;
+    }
+
+    .contacts {
+        width: fit-content;
+        padding: 10px 20px;
+    }
+
+    .contacts a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+    }
+    .contacts a,
+    .email-contact {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .email-contact{
+        word-break: break-word;
+    }
+    .contacts span {
+        font-size: 14px;
+    }
+
+    i {
+        padding: 5px;
+        font-size: 35px;
+    }
+
+    i:active {
+        transform: scale(1.2);
+        text-shadow: 0 0 10px white;
+    }
+
+    #songTitle {
+        top: 140px;
+        right: 20px;
+        width: 80px;
+        max-width: 45vw;
+        text-align: center;
+        font-size: 11px;
+        padding: 8px;
+    }
+    #nextBtn{
+        display: none;
+    }
+    .yuta{
+        user-select: none;
+    }
+    #musicBtn{
+        top: 60px;
+        right: 20px;
+    }
+    .yuta-box:active .yuta{
+    border: 2px solid hsl(0, 100%, 12%);
+    box-shadow: 0 0 15px hsl(0, 100%, 12%);
+}
+}
